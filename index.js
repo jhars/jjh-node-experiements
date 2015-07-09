@@ -36,6 +36,10 @@ app.post('/users',function (req, res){
 	res.json(newUser);
 });
 
+
+
+
+
 //-----------update user-------------------//
 app.put('/users/:id', function (req, res){
 	var targetID = parseInt(req.params.id);
@@ -46,12 +50,26 @@ app.put('/users/:id', function (req, res){
 });
 
 
-//---------show user based on ID in URL------//
+
+
+
+
+
+
+//---------show User based on ID in URL----------//
 app.get('/users/:id', function (req, res){
 	var targetID = parseInt(req.params.id);
 	var showUser = _.findWhere(users, {id: targetID});
 	res.json(showUser);
 });
+
+
+
+
+
+
+
+
 
 //----------DELETE USER-----------------//
 app.delete('/users/:id',function (req, res){
