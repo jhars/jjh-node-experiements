@@ -43,6 +43,7 @@ app.post('/users',function (req, res){
 //-----------update user-------------------//
 app.put('/users/:id', function (req, res){
 	var targetID = parseInt(req.params.id);
+	//-------SAME AS forEach + if statement--------//
 	var foundUser = _.findWhere(users, {id: targetID});
 	foundUser.firstname = req.body.firstname;
 	foundUser.lastname = req.body.lastname;
